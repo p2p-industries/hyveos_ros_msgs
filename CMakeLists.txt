@@ -9,9 +9,19 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
+set(msg_files
+  "msg/ReceivedRequest.msg"
+)
+
+set(srv_files
+  "srv/RequestSubscription.srv"
+  "srv/Respond.srv"
+  "srv/SendRequest.srv"
+)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Test.msg"
-  "srv/Test.srv"
+  ${msg_files}
+  ${srv_files}
 )
 
 ament_export_dependencies(rosidl_default_runtime)

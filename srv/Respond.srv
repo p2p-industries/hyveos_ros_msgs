@@ -1,0 +1,7 @@
+uint64 seq
+bool success
+byte[] response
+string error
+---
+bool success
+string error

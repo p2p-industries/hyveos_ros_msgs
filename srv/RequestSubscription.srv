@@ -1,0 +1,5 @@
+string topic ""
+bool no_topic false
+---
+bool success
+string error
