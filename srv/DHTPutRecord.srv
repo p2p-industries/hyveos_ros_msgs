@@ -1,6 +1,6 @@
 string topic
 string key
-byte[] value
+string value
 ---
 bool success
 string error
