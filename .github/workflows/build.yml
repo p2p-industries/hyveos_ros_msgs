@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: read
+    strategy:
+      fail-fast: false
+      matrix:
+        distro: [jazzy, rolling]
+    env:
+      ROS_DISTRO: ${{ matrix.distro }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: src/hyveos_msgs
+      - name: Build and test workspace
+        uses: ichiro-its/ros2-ws-action@v1.0.1
+        with:
+          distro: ${{ matrix.distro }}
