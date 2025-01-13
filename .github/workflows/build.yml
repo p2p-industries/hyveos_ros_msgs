@@ -24,7 +24,7 @@ jobs:
     env:
       ROS_DISTRO: ${{ matrix.distro }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           path: src/hyveos_msgs
       - name: Build and test workspace
