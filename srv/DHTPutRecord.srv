@@ -1,0 +1,6 @@
+string topic
+string key
+string value
+---
+bool success
+string error

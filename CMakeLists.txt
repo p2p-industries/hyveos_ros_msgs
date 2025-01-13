@@ -10,10 +10,18 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
+  "msg/NeighbourEvent.msg"
+  "msg/ReceivedPubsubMessage.msg"
   "msg/ReceivedRequest.msg"
 )
 
 set(srv_files
+  "srv/DHTGetRecord.srv"
+  "srv/DHTPutRecord.srv"
+  "srv/GetId.srv"
+  "srv/GetNeighbours.srv"
+  "srv/PubsubPublish.srv"
+  "srv/PubsubSubscription.srv"
   "srv/RequestSubscription.srv"
   "srv/Respond.srv"
   "srv/SendRequest.srv"

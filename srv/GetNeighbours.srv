@@ -1,0 +1,4 @@
+---
+bool success
+string[] neighbour_ids
+string error
