@@ -1,0 +1,6 @@
+string topic
+string key
+---
+bool success
+byte[] data
+string error

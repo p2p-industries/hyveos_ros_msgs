@@ -1,0 +1,6 @@
+string topic
+byte[] data
+---
+bool success
+byte[] msg_id
+string error
