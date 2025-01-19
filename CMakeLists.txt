@@ -16,12 +16,12 @@ set(msg_files
 )
 
 set(srv_files
-  "srv/DHTGetRecord.srv"
-  "srv/DHTPutRecord.srv"
   "srv/GetId.srv"
+  "srv/GetKVRecord.srv"
   "srv/GetNeighbours.srv"
   "srv/PubsubPublish.srv"
   "srv/PubsubSubscription.srv"
+  "srv/PutKVRecord.srv"
   "srv/RequestSubscription.srv"
   "srv/Respond.srv"
   "srv/SendRequest.srv"
